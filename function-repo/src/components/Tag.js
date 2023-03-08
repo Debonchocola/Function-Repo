@@ -37,6 +37,7 @@ const Tag = () => {
         <TagInput
           type="text"
           placeholder="Press enter to add tags"
+          value={null}
           onKeyUp={(event) => (event.key === "Enter" ? addTags(event) : null)}
         ></TagInput>
       </TagBox>
