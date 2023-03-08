@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 const Tag = () => {
   const [tagList, setTagList] = useState([]);
