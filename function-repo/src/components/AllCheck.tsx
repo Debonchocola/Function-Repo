@@ -29,14 +29,14 @@ const StyledTable = styled.table`
 
 const Test = () => {
   const data = [
-    { id: 0, title: "선택 1" },
-    { id: 1, title: "선택 2" },
-    { id: 2, title: "선택 3" },
-    { id: 3, title: "선택 4" },
+    { id: "0", title: "선택 1" },
+    { id: "1", title: "선택 2" },
+    { id: "2", title: "선택 3" },
+    { id: "3", title: "선택 4" },
   ];
-  const [checkItems, setCheckItems] = useState([]);
+  const [checkItems, setCheckItems] = useState<string[]>([]);
 
-  const handleSingleCheck = (checked, id) => {
+  const handleSingleCheck = (checked: boolean, id: string) => {
     if (checked) {
       // 단일 선택 시 체크된 아이템을 배열에 추가
       setCheckItems((prev) => [...prev, id]);
@@ -46,10 +46,10 @@ const Test = () => {
     }
   };
 
-  const handleAllCheck = (checked) => {
+  const handleAllCheck = (checked: boolean) => {
     if (checked) {
       // 전체 선택 클릭 시 데이터의 모든 아이템(id)를 담은 배열로 checkItems 상태 업데이트
-      const idArray = [];
+      const idArray: string[] = [];
       data.forEach((el) => idArray.push(el.id));
       setCheckItems(idArray);
     } else {
