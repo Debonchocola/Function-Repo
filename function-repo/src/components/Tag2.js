@@ -38,6 +38,7 @@ const Tag2 = () => {
 
         <TagInput
           type="text"
+          value={null}
           placeholder="Press enter to add tags"
           onKeyUp={addTags}
         ></TagInput>
