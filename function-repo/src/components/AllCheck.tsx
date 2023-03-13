@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const StyledTable = styled.table`
@@ -27,7 +27,7 @@ const StyledTable = styled.table`
   }
 `;
 
-const Test = () => {
+const Check = () => {
   const data = [
     { id: "0", title: "선택 1" },
     { id: "1", title: "선택 2" },
@@ -94,4 +94,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Check;
