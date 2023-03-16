@@ -1,3 +1,4 @@
+import Switch from "components/Switch";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Check from "./components/AllCheck";
@@ -9,9 +10,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="check" element={<Check />} />
-          <Route path="tag" element={<Tag />} />
-          <Route path="tag2" element={<Tag2 />} />
+          <Route path="/check" element={<Check />} />
+          <Route path="/tag" element={<Tag />} />
+          <Route path="/tag2" element={<Tag2 />} />
+          <Route path="/switch" element={<Switch />} />
         </Routes>
       </BrowserRouter>
     </div>
