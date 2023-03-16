@@ -35,20 +35,22 @@ const Switch = () => {
   const [cnt, setCnt] = useState(0);
 
   const Plus = () => {
-    setCnt((prev) => prev + 1);
+    if (cnt < 10) {
+      setCnt((prev) => prev + 1);
+    } else {
+      setCnt((prev) => prev);
+    }
   };
 
   const Minus = () => {
-    setCnt((prev) => prev - 1);
+    if (cnt > 0) {
+      setCnt((prev) => prev - 1);
+    } else {
+      setCnt((prev) => prev);
+    }
   };
 
-  if (cnt < 0) {
-    cnt = 0;
-  } else if (cnt > 10) {
-    cnt = 10;
-  }
-
-  const num1 = 46.2525;
+  const num1 = 46.252514242;
   const result1 = num1.toFixed(cnt);
 
   return (
