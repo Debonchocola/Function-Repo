@@ -59,6 +59,7 @@ const Switch = () => {
       <button onClick={Minus}>-</button>
       <div>{cnt}</div>
       <div>{result1}</div>
+      <select>1</select>
     </div>
   );
 };
